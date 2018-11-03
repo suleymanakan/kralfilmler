@@ -2,11 +2,15 @@ import React from 'react';
  import PropTypes from 'prop-types';
  import {connect} from 'react-redux';
  import MoviesList from '../MoviesList';
-
+import {fetchMovies} from '../../sa_actions/Movies';
 class MoviesPage extends React.Component{
     static propTypes={
-        movies:PropTypes.array.isRequired
+        movies:PropTypes.object.isRequired
     };
+    componentDidMount(){
+        this.props.fetchMovies();
+
+    }
     render(){
        
         return(
@@ -20,7 +24,9 @@ class MoviesPage extends React.Component{
 const mapStateToPops = ({movies})=>{
     return{
         movies
-    }
-  
-}
-export default connect(mapStateToPops)(MoviesPage);
+    } 
+};
+const mapDispatchToProps={
+    fetchMovies
+};
+export default connect(mapStateToPops,mapDispatchToProps)(MoviesPage);
