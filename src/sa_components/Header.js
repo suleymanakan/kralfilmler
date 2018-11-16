@@ -1,6 +1,6 @@
 import React from 'react';
 import {menuStyle,fixedMenuStyle} from '../css/style';
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import {
     Container, Dropdown, Image, Menu, Visibility,
   } from 'semantic-ui-react'
@@ -19,7 +19,7 @@ class Header extends React.Component{
 
   unStickTopMenu = () => this.setState({ menuFixed: null })
 render(){
-  const { menuFixed, overlayFixed, overlayRect } = this.state
+  const { menuFixed } = this.state
     return(
         <div>
         <Visibility
@@ -32,14 +32,14 @@ render(){
             fixed={menuFixed && 'top'}
             style={menuFixed ? fixedMenuStyle : menuStyle} >
             <Container text>
-              <Menu.Item>
+              <Menu.Item as={Link} to='/'  exact="true"  >
                 <Image size='mini' src='https://react.semantic-ui.com/logo.png' />
+                <Menu.Item header>Kral Filmler </Menu.Item>
               </Menu.Item>
-              <Menu.Item header>Kral Filmler</Menu.Item>
-              <Menu.Item as={Link} to='/movies' >
+              <Menu.Item as={NavLink} to='/movies' exact >
               Filmler
               </Menu.Item>
-              <Menu.Item as='a'>Yeni Film Ekle</Menu.Item>
+              <Menu.Item as={NavLink} to='/movies/NewMoviePAge' exact>Yeni Film Ekle</Menu.Item>
 
               <Menu.Menu position='right'>
                 <Dropdown text='Kategoriler' pointing className='link item'>

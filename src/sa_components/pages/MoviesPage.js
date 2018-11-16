@@ -3,19 +3,20 @@ import React from 'react';
  import {connect} from 'react-redux';
  import MoviesList from '../MoviesList';
 import {fetchMovies} from '../../sa_actions/Movies';
+
+
 class MoviesPage extends React.Component{
     static propTypes={
-        movies:PropTypes.object.isRequired
+        movies: PropTypes.object.isRequired
     };
     componentDidMount(){
         this.props.fetchMovies();
-
     }
     render(){
        
         return(
             <div>
-                <h2>Bu sayfa MoviesPage dir</h2>
+                <h2>MoviesPage Sayfasıdır</h2>
                 <MoviesList movies={this.props.movies}></MoviesList>
             </div>
         )

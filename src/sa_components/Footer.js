@@ -1,14 +1,14 @@
 import React from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import {
-    Container, Divider, Grid,Header,Image,List, Segment,
+    Container, Grid,Header,Image,List, Segment,
   } from 'semantic-ui-react'
- const Footer=props=> {
+ const Footer=()=> {
     return(
         <div>
-            <Segment inverted style={{ margin: '5em 0em 0em', padding: '1em 0em' }} vertical>
-          <Container textAlign='center'>
-            <Grid columns={4} divided stackable inverted>
+         <Segment inverted style={{ margin: '5em 0em 0em', padding: '1em 0em' }} vertical>
+           <Container textAlign='center'>
+            <Grid columns={3} >
               <Grid.Row>
                 <Grid.Column>
                   <Header inverted as='h4' content='Yabancı Diziler' />
