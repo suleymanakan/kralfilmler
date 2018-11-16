@@ -1,9 +1,21 @@
-
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.clearfix{
+  clear: both;
+  margin-bottom: 10px;
 }
+.InlineError{
+  color:red;
+}
+
+.body{
+  position: center;
+  margin: 0px auto;
+  padding: 5%;
+  margin-left: 20px;
+  background-color: #35bdb2;
+  margin-right: 0%;
+  margin-left: 0%;
+}
+
 
 .App-header {
   background-color: #282c34;
@@ -17,7 +29,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #35bdb2;
 }
 
 @keyframes App-logo-spin {

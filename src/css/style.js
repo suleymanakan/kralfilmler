@@ -1,3 +1,4 @@
+ 
 export const menuStyle = {
     border: 'none',
     borderRadius: 0,
@@ -5,6 +6,7 @@ export const menuStyle = {
     marginBottom: '1em',
     marginTop: '1em',
     transition: 'box-shadow 0.5s ease, padding 0.5s ease',
+    
   };
   
  export const fixedMenuStyle = {
@@ -13,7 +15,3 @@ export const menuStyle = {
     boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.2)',
   };
   
-export  const overlayStyle = {
-    float: 'left',
-    margin: '0em 3em 1em 0em',
-  };
