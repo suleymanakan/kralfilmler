@@ -14,8 +14,7 @@ import {
                   <Header inverted as='h4' content='Yabancı Diziler' />
                   <List link inverted>
                     <List.Item as='a'>Breeking Bad</List.Item>
-                    <List.Item as='a'>Fretch</List.Item>
-                    
+                    <List.Item as='a'>Fretch</List.Item>  
                   </List>
                 </Grid.Column>
                 <Grid.Column>
@@ -23,23 +22,16 @@ import {
                   <List link inverted>
                     <List.Item as='a'>Kurtlar Vadisi Pusu</List.Item>
                     <List.Item as='a'>Acı Hayat</List.Item>
-                   
                   </List>
                 </Grid.Column>
                 <Grid.Column>
                   <Header inverted as='h4' content='Hint Filmleri' />
                   <List link inverted>
                     <List.Item as='a'>Dangal</List.Item>
-                    <List.Item as='a'>Sakan</List.Item>
-                    
+                    <List.Item as='a'>Sakan</List.Item> 
                   </List>
                 </Grid.Column>
-                <Grid.Column>
-                  <Header inverted as='h4' content='Başlık' />
-                  <p>
-                   Ek Alan
-                  </p>
-                </Grid.Column>
+              
               </Grid.Row>
             </Grid>
             <hr></hr>
