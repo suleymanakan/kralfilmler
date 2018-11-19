@@ -13,7 +13,6 @@ class MoviesPage extends React.Component{
         this.props.fetchMovies();
     }
     render(){
-       
         return(
             <div>
                 <h2>MoviesPage Sayfasıdır</h2>
