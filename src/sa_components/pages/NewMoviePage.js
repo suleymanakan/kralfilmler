@@ -1,11 +1,16 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import MovieAddForm from '../MovieAddForm';
-import {postNewMovie} from '../../sa_actions/NewMovie';
+import {postNewMovie, fetchMovie } from '../../sa_actions/NewMovie';
 import { Item } from 'semantic-ui-react';
 
 class NewMoviePage extends React.Component{
- 
+ componentDidMount(){
+     const {match}=this.props;
+     if(!this.props.movie && match.params._id){
+         this.props.fetchMovie(match.params._id);
+     }
+ }
     render(){
         return(
             <div>
@@ -27,6 +32,7 @@ const mapStateToProps = ({newMovie, movies},props) =>{
     }
 }
 const mapDispatchToProps = {
-        postNewMovie
+        postNewMovie,
+        fetchMovie
 }
 export default connect(mapStateToProps, mapDispatchToProps )(NewMoviePage);
