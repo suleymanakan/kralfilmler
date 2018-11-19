@@ -44,11 +44,20 @@ class MovieAddForm extends React.Component{
        //if(!this.state.movieGenre) errors.movieGenre="Lütfen Boş Bırakmayınız";
        return errors;
    }
+   componentWillReceiveProps(nextProps){
+       const { movie } = nextProps.newMovie;
+       if(movie.title && ! movie.title !== this.state.title ){
+           this.setState({
+               title: movie.title,
+               cover: movie.cover
+           })
+       }
+   }
 
     render(){
         const {errors} = this.state
         const form=(
-         <Form onSubmit={this.onSubmit} loading={this.props.newMovie.fetching}>
+         <Form onSubmit={this.onSubmit} loading={this.props.newMovie.fetching || this.props.newMovie.movie.fetching}>
                     <Form.Field >
                     <label>Film İsmi</label>
                     {errors.title && <InlineError message={errors.title}  />}

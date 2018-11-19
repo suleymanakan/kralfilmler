@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div className="App">
 
-        <Header />
+      <Header />
       <Container text >
       <Route exact path='/movies' component={MoviesPage}></Route>
      
