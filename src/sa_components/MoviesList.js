@@ -4,6 +4,7 @@ import MovieCard from './MovieCard';
 import '../App.css';
 import { Grid } from 'semantic-ui-react';
 import {BounceLoader} from 'react-spinners';
+
     
 const MoviesList=({movies})=> {
     const emptyMesage=(
@@ -21,7 +22,7 @@ const MoviesList=({movies})=> {
               
                 <Grid  columns={3}>
                 
-                    { movies.movies.map(movie=>
+                    { movies.movieList.map(movie=>
                       <MovieCard key={movie._id} movie={movie} />)} 
 
                 </Grid> 
@@ -42,7 +43,7 @@ const MoviesList=({movies})=> {
 
 MoviesList.propTypes={
     movies: PropTypes.shape({
-        movies: PropTypes.array.isRequired
+        movieList: PropTypes.array.isRequired
     }).isRequired
 }; 
 export default MoviesList;
