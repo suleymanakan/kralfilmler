@@ -39,7 +39,7 @@ render(){
               <Menu.Item as={NavLink} to='/movies' exact >
               Filmler
               </Menu.Item>
-              <Menu.Item as={NavLink} to='/movies/NewMoviePAge' exact>Yeni Film Ekle</Menu.Item>
+              <Menu.Item as={NavLink} to='/movies/new' exact>Yeni Film Ekle</Menu.Item>
 
               <Menu.Menu position='right'>
                 <Dropdown text='Kategoriler' pointing className='link item'>

@@ -20,7 +20,7 @@ class App extends Component {
       <Container text >
       <Route exact path='/movies' component={MoviesPage}></Route>
      
-      <Route exact path='/movies/New' component={NewMoviePage}></Route>
+      <Route exact path='/movies/new' component={NewMoviePage}></Route>
       <Route axact path='/movie/:_id' component={NewMoviePage} ></Route>
       </Container>
 
