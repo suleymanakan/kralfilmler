@@ -1,13 +1,26 @@
 import React from 'react'
-import { Card, Icon, Grid } from 'semantic-ui-react'
+import '../App.css';
+import {Link} from 'react-router-dom';
+import { Card, Grid,Icon, Button } from 'semantic-ui-react'
 
 
-/*const extra = (
-  <a>
-    <Icon name='user' />
-    16 Friends
-  </a>
-)*/
+const extra =movie=> {
+  return(
+  <div className="ui-ikili-button"  >
+    <Button animated as={Link} to={`/movie/${movie._id}`} >
+      <Button.Content  visible>Edit</Button.Content>
+      <Button.Content hidden>
+        <Icon name='arrow right' />
+      </Button.Content>
+    </Button>
+    <Button animated='vertical'>
+      <Button.Content  hidden>Delete</Button.Content>
+      <Button.Content visible>
+        <Icon name='trash' />
+      </Button.Content>
+    </Button>
+  </div>
+)}
 
 const MovieCard = ({movie}) => (
   <Grid.Column   >
@@ -15,7 +28,7 @@ const MovieCard = ({movie}) => (
     image={movie.cover}
     header= {movie.title}
     description='sakan'
-   // extra={extra}
+    extra={extra(movie)}
   />
 </Grid.Column>
 )
