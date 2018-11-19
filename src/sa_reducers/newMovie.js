@@ -1,7 +1,8 @@
 import {NEW_MOVİE_FULFILLED, NEW_MOVİE_REJECTED, NEW_MOVİE_PENDING} from '../sa_actions/NewMovie';
 
 const initialstate={
-    fetching:false,
+    fetching: false,
+    done: false,
     movies: [],
     error: {}
 
@@ -17,7 +18,8 @@ export default (state=initialstate, action)=>{
         return {
             ...state,
             movies: action.payload,
-            fetching:false
+            fetching: false,
+            done: true
         }
         case NEW_MOVİE_REJECTED:
         return{

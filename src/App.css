@@ -5,16 +5,12 @@
 .InlineError{
   color:red;
 }
-
-.body{
-  position: center;
-  margin: 0px auto;
-  padding: 5%;
-  margin-left: 20px;
-  background-color: #35bdb2;
-  margin-right: 0%;
-  margin-left: 0%;
+.addFromError{
+  text-align: center;
+  color: red;
+  
 }
+
 
 
 .App-header {
