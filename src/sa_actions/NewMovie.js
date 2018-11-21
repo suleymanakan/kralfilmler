@@ -9,11 +9,27 @@ export const FETCH_MOVİE_PENDING = "FETCH_MOVİE_PENDING";
 export const FETCH_MOVİE_FULFILLED = "FETCH_MOVİE_FULFILLED";
 export const FETCH_MOVİE_REJECTED = "FETCH_MOVİE_REJECTED";
 
+export const UPDATE_MOVİE_PENDING = "UPDATE_MOVİE_PENDING";
+export const UPDATE_MOVİE_FULFILLED = "UPDATE_MOVİE_FULFILLED";
+export const UPDATE_MOVİE_REJECTED = "UPDATE_MOVİE_REJECTED";
+
 export function postNewMovie({title, cover}){
     return dispatch => {
        dispatch({
           type: "NEW_MOVİE",
           payload: axios.post(`${API_PATH}/movies`, {//Post Method
+              title,cover
+          })
+         
+      })
+    }
+};
+
+export function onUpdateMovieSumbit({_id,title, cover}){
+    return dispatch => {
+       dispatch({
+          type: "NEW_MOVİE",
+          payload: axios.post(`${API_PATH}/movies/${_id}`, {//Post Method
               title,cover
           })
          
