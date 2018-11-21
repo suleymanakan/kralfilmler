@@ -2,6 +2,10 @@ import {NEW_MOVİE_FULFILLED,
         NEW_MOVİE_REJECTED,
         NEW_MOVİE_PENDING,
 
+        UPDATE_MOVİE_FULFILLED,
+        UPDATE_MOVİE_REJECTED,
+        UPDATE_MOVİE_PENDING,
+
         FETCH_MOVİE_FULFILLED,
         FETCH_MOVİE_REJECTED,
         FETCH_MOVİE_PENDING } from '../sa_actions/NewMovie';
@@ -58,6 +62,24 @@ export default (state=initialstate, action)=>{
                 fetching:false
             }
             
+        }
+        ////////UPDATE////
+        case NEW_MOVİE_PENDING:
+        return{
+            ...state,
+            fetching: true
+        }
+        case NEW_MOVİE_FULFILLED:
+        return {
+            ...state,
+            fetching: false,
+            done: true
+        }
+        case NEW_MOVİE_REJECTED:
+        return{
+            ...state,
+            error: action.payload,
+            fetching:false
         }
         default:
            return state;
