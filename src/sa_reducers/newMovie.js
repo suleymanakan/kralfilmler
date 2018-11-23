@@ -64,18 +64,18 @@ export default (state=initialstate, action)=>{
             
         }
         ////////UPDATE////
-        case NEW_MOVİE_PENDING:
+        case UPDATE_MOVİE_PENDING:
         return{
             ...state,
             fetching: true
         }
-        case NEW_MOVİE_FULFILLED:
+        case UPDATE_MOVİE_FULFILLED:
         return {
             ...state,
             fetching: false,
             done: true
         }
-        case NEW_MOVİE_REJECTED:
+        case UPDATE_MOVİE_REJECTED:
         return{
             ...state,
             error: action.payload,
