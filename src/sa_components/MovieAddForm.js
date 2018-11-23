@@ -13,11 +13,14 @@ const options=[
 ]
 class MovieAddForm extends React.Component{
     state={
+        _id: this.props.movie ? this.props.movie._id : '',
         title: this.props.movie ? this.props.movie.title : '',
         cover: this.props.movie ? this.props.movie.cover : '',
         movie_genre: '',
         errors: {}   
     };
+
+    
     static propTypes={
         postNewMovie:PropTypes.func.isRequired
     };
@@ -33,8 +36,15 @@ class MovieAddForm extends React.Component{
        this.setState({
            errors
        });
+       const _id=this.state._id|| this.props.newMovie.movie._id;
+
        if(Object.keys(errors).length === 0){
-           this.props.postNewMovie(this.state)
+          // this.props.postNewMovie(this.state)
+           if(!_id)
+           this.props.onNewMovieSumbit(this.state)
+           else
+           this.props.onUpdateMovieSumbit({...this.state, _id})
+
        }
    };
    validations=()=>{

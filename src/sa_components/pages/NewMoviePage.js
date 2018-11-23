@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import MovieAddForm from '../MovieAddForm';
-import {postNewMovie, fetchMovie } from '../../sa_actions/NewMovie';
+import {postNewMovie, fetchMovie, onUpdateMovieSumbit } from '../../sa_actions/NewMovie';
 import { Item } from 'semantic-ui-react';
 
 class NewMoviePage extends React.Component{
@@ -33,6 +33,7 @@ const mapStateToProps = ({newMovie, movies},props) =>{
 }
 const mapDispatchToProps = {
         postNewMovie,
+        onUpdateMovieSumbit,
         fetchMovie
 }
 export default connect(mapStateToProps, mapDispatchToProps )(NewMoviePage);
