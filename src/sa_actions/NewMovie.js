@@ -25,11 +25,11 @@ export function postNewMovie({title, cover}){
     }
 };
 
-export function onUpdateMovieSumbit({_id,title, cover}){
+export function onUpdateMovieSumbit({_id, title, cover}){
     return dispatch => {
        dispatch({
-          type: "NEW_MOVİE",
-          payload: axios.post(`${API_PATH}/movies/${_id}`, {//Post Method
+          type: "UPDATE_MOVİE",
+          payload: axios.put(`${API_PATH}/movies/${_id}`, {//Post Method
               title,cover
           })
          
