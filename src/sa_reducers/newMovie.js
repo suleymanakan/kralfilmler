@@ -30,7 +30,6 @@ export default (state=initialstate, action)=>{
         case NEW_MOVİE_FULFILLED:
         return {
             ...state,
-            movies: action.payload,
             fetching: false,
             done: true
         }
@@ -40,7 +39,7 @@ export default (state=initialstate, action)=>{
             error: action.payload,
             fetching:false
         }
-        ///////////////////////////////////////
+        /////////////// FETCH ////////////////////////
         case FETCH_MOVİE_PENDING:
         return{
             ...state,
