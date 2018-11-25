@@ -36,12 +36,13 @@ class MovieAddForm extends React.Component{
        this.setState({
            errors
        });
-       const _id=this.state._id|| this.props.newMovie.movie._id;
+       const _id = this.state._id || this.props.newMovie.movie._id;
+       console.log(_id)
 
        if(Object.keys(errors).length === 0){
           // this.props.postNewMovie(this.state)
            if(!_id)
-           this.props.onNewMovieSumbit(this.state)
+           this.props.postNewMovie(this.state)
            else
            this.props.onUpdateMovieSumbit({...this.state, _id})
 

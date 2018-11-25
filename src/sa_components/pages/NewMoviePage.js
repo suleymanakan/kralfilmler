@@ -18,7 +18,8 @@ class NewMoviePage extends React.Component{
                 <MovieAddForm 
                 movie={this.props.movie}
                 newMovie={this.props.newMovie}
-                postNewMovie={this.props.postNewMovie} />
+                postNewMovie={this.props.postNewMovie}
+                onUpdateMovieSumbit={this.props.onUpdateMovieSumbit} />
 
             </div>
         )
