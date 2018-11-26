@@ -6,7 +6,7 @@ import { Grid } from 'semantic-ui-react';
 import {BounceLoader} from 'react-spinners';
 
     
-const MoviesList=({movies})=> {
+const MoviesList=({movies, onDeleteMovie})=> {
     const emptyMesage=(
         <p>Hiç bir film bulunamadı</p>
     );
@@ -23,7 +23,10 @@ const MoviesList=({movies})=> {
                 <Grid  columns={3}>
                 
                     { movies.movieList.map(movie=>
-                      <MovieCard key={movie._id} movie={movie} />)} 
+                      <MovieCard 
+                      key={movie._id} 
+                      onDeleteMovie={onDeleteMovie}
+                      movie={movie} />)} 
 
                 </Grid> 
              
